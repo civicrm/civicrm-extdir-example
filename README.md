@@ -15,13 +15,13 @@ If installing manually, then clone the git repo ( https://github.com/civicrm/civ
 location.  Determine the corresponding URL (e.g.  "http://extdir.localhost") and run:
 
 ```bash
-env DL_URL="http://extdir.localhost" bash make.sh
+env DL_URL="http://extdir.localhost" ./extdir.sh make
 ```
 
 ### Managing extensions
 
-To add an extension, simply add an eponymous folder with the code and re-run the "make.sh" script.  Similarly, to update (or
-remove) an extension, update (or remove) the folder, and again run "make.sh".
+To add an extension, simply add an eponymous folder with the code and re-run the "extdir.sh make" script.  Similarly, to update (or
+remove) an extension, update (or remove) the folder, and again run "extdir.sh make".
 
 ### Browsing and downloading extensions
 
