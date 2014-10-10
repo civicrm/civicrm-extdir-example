@@ -54,6 +54,20 @@ function do_make() {
 }
 
 ###########################################################################
+## Helper: civicrm.settings.php help
+
+function do_civicrm_setting_help() {
+  echo "================================================================================"
+  echo "================================================================================"
+  echo "To use this extension directory, you must set the ext_repo_url setting."
+  echo "For example, in civicrm.settings.php or /etc/civicrm.settings.d/, add:"
+  echo '  global $civicrm_setting;'
+  echo '  $civicrm_setting["Extension Preferences"]["ext_repo_url"] = "'$DL_URL'";'
+  echo "================================================================================"
+  echo "================================================================================"
+}
+
+###########################################################################
 ## Helper: Cleanup
 function do_clean() {
   pushd "$REPO" >> /dev/null
@@ -71,6 +85,7 @@ case "$1" in
     do_init
     do_clean
     do_make
+    do_civicrm_setting_help
     ;;
   clean)
     do_init
