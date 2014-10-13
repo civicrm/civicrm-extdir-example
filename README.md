@@ -33,7 +33,7 @@ Setup a web-accessible folder and clone the git repo ( https://github.com/civicr
 web-accessible directory.  Determine the corresponding URL (e.g.  "http://extdir.localhost") and run:
 
 ```bash
-echo http://extdir.localhost > .url
+echo http://extdir.localhost > .extdir-url
 ./extdir.sh make
 ```
 

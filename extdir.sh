@@ -14,11 +14,8 @@ function do_init() {
     INDEX="$(pwd)/index.html"
   
     ## The public download URL
-    if [ -z "$DL_URL" -a -n `which amp` ]; then
-      if amp export -Ncms --prefix=CMS_ >> /dev/null ; then
-        eval $(amp export -Ncms --prefix=CMS_)
-        DL_URL="$CMS_URL"
-      fi
+    if [ -z "$DL_URL" -a -f .extdir-url ]; then
+      DL_URL=$(cat .extdir-url)
     fi
     if [ -z "$DL_URL" ]; then
       echo "Failed to determine DL_URL. If not using buildkit, then you must manually set DL_URL."
