@@ -39,7 +39,7 @@ function do_make() {
       if [ -f "$EXT/info.xml" ]; then
         [ -f "zips/$EXT.zip" ]  && rm -f "zips/$EXT.zip"
         zip -r "zips/$EXT.zip" $EXT -x '*~' '*/.git/*'
-        cat "$EXT/info.xml" | sed "s;</extension>;  <downloadUrl>$DL_URL/zips/$EXT.zip</downloadUrl></extension>;" > "$EXT.xml"
+        cat "$EXT/info.xml" | sed "s;</extension>;  <downloadUrl>$DL_URL/zips/$EXT.zip</downloadUrl></extension>;" > "single/$EXT.xml"
         echo "<li><a href="$EXT.xml">$EXT.xml</a></li>" >> "$INDEX"
       fi
 
