@@ -32,7 +32,7 @@ function do_make() {
 
     echo "<html><body><ul>" > "$INDEX"
 
-    find -maxdepth 1 -mindepth 1 -type d  | while read DIR ; do
+    find -maxdepth 1 -mindepth 1 -type d -o \( -type l -a -xtype d \)  | while read DIR ; do
       EXT=$(basename "$DIR")
       set -x
 
