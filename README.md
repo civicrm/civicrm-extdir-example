@@ -14,7 +14,7 @@ If you use buildkit ( https://github.com/civicrm/civicrm-buildkit ), then instal
 Choose a URL like "http://extdir.localhost" and run:
 
 ```bash
-civibuild extdir --url http://extdir.localhost
+civibuild create extdir --url http://extdir.localhost
 ## Note: You may need to update /etc/hosts and/or restart Apache
 ```
 
